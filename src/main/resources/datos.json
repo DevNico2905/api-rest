@@ -1,0 +1,142 @@
+[
+  {
+    "productName": "Mouse inalámbrico ergonómico",
+    "description": "Mouse vertical inalámbrico con sensor óptico de 4000 DPI y batería recargable",
+    "price": 89900.0,
+    "amount": 42,
+    "status": "DISPONIBLE"
+  },
+  {
+    "productName": "Monitor 27 pulgadas 144Hz",
+    "description": "Monitor IPS QHD de 27 pulgadas, 144Hz de refresco y 1ms de respuesta",
+    "price": 1299000.0,
+    "amount": 8,
+    "status": "DISPONIBLE"
+  },
+  {
+    "productName": "Silla gamer ergonómica",
+    "description": "Silla con soporte lumbar ajustable, reposabrazos 4D y reclinación hasta 180 grados",
+    "price": 749000.0,
+    "amount": 12,
+    "status": "DISPONIBLE"
+  },
+  {
+    "productName": "Audífonos Bluetooth con cancelación de ruido",
+    "description": "Audífonos over-ear con ANC activa, 30 horas de autonomía y estuche de transporte",
+    "price": 459000.0,
+    "amount": 25,
+    "status": "DISPONIBLE"
+  },
+  {
+    "productName": "SSD NVMe 1TB",
+    "description": "Unidad de estado sólido M.2 PCIe Gen4 con velocidad de lectura de 7000 MB/s",
+    "price": 389000.0,
+    "amount": 30,
+    "status": "DISPONIBLE"
+  },
+  {
+    "productName": "Memoria RAM 16GB DDR5",
+    "description": "Módulo DDR5 de 16GB a 5600MHz con disipador de aluminio",
+    "price": 279000.0,
+    "amount": 18,
+    "status": "DISPONIBLE"
+  },
+  {
+    "productName": "Webcam Full HD 1080p",
+    "description": "Cámara web con enfoque automático, micrófono estéreo integrado y cubierta de privacidad",
+    "price": 149900.0,
+    "amount": 0,
+    "status": "NO_DISPONIBLE"
+  },
+  {
+    "productName": "Hub USB-C 7 en 1",
+    "description": "Adaptador con HDMI 4K, dos puertos USB 3.0, lector SD/microSD y carga PD de 100W",
+    "price": 119000.0,
+    "amount": 55,
+    "status": "DISPONIBLE"
+  },
+  {
+    "productName": "Micrófono condensador USB",
+    "description": "Micrófono cardioide para streaming y podcast con soporte de escritorio y filtro antipop",
+    "price": 329000.0,
+    "amount": 14,
+    "status": "DISPONIBLE"
+  },
+  {
+    "productName": "Base refrigerante para portátil",
+    "description": "Base con cinco ventiladores, altura ajustable en seis niveles y puerto USB pasante",
+    "price": 79900.0,
+    "amount": 33,
+    "status": "DISPONIBLE"
+  },
+  {
+    "productName": "Tarjeta gráfica RTX 4060 8GB",
+    "description": "GPU con 8GB GDDR6, soporte para ray tracing y DLSS 3",
+    "price": 1899000.0,
+    "amount": 0,
+    "status": "NO_DISPONIBLE"
+  },
+  {
+    "productName": "Fuente de poder 650W 80 Plus Bronze",
+    "description": "Fuente semimodular con certificación 80 Plus Bronze y ventilador silencioso de 120mm",
+    "price": 349000.0,
+    "amount": 20,
+    "status": "DISPONIBLE"
+  },
+  {
+    "productName": "Router WiFi 6 doble banda",
+    "description": "Router AX1800 con cuatro antenas externas, cuatro puertos Gigabit y control parental",
+    "price": 289000.0,
+    "amount": 16,
+    "status": "DISPONIBLE"
+  },
+  {
+    "productName": "Disco duro externo 2TB",
+    "description": "Disco portátil USB 3.2 de 2TB compatible con Windows, macOS y Linux",
+    "price": 319000.0,
+    "amount": 27,
+    "status": "DISPONIBLE"
+  },
+  {
+    "productName": "Tableta gráfica con lápiz",
+    "description": "Tableta de dibujo de 10x6 pulgadas con lápiz sin batería de 8192 niveles de presión",
+    "price": 269000.0,
+    "amount": 11,
+    "status": "DISPONIBLE"
+  },
+  {
+    "productName": "Cable HDMI 2.1 de 2 metros",
+    "description": "Cable trenzado con soporte 8K a 60Hz, 4K a 120Hz y ancho de banda de 48Gbps",
+    "price": 49900.0,
+    "amount": 80,
+    "status": "DISPONIBLE"
+  },
+  {
+    "productName": "Impresora multifuncional a color",
+    "description": "Impresora de inyección con escáner, copiadora, WiFi y sistema de tinta continua",
+    "price": 899000.0,
+    "amount": 0,
+    "status": "NO_DISPONIBLE"
+  },
+  {
+    "productName": "Parlante Bluetooth portátil",
+    "description": "Parlante resistente al agua IPX7 con 12 horas de reproducción y sonido de 360 grados",
+    "price": 199000.0,
+    "amount": 38,
+    "status": "DISPONIBLE"
+  },
+  {
+    "productName": "UPS regulador 1000VA",
+    "description": "Sistema de alimentación ininterrumpida con ocho tomas, regulador AVR y pantalla LCD",
+    "price": 549000.0,
+    "amount": 9,
+    "status": "DISPONIBLE"
+  },
+  {
+    "productName": "Soporte de monitor doble brazo",
+    "description": "Soporte de escritorio para dos monitores de hasta 32 pulgadas con giro e inclinación",
+    "price": 189000.0,
+    "amount": 22,
+    "status": "DISPONIBLE"
+  }
+]
