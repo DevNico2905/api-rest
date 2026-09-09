@@ -1,6 +1,7 @@
 package com.devnico.api_rest.controller;
 
 import com.devnico.api_rest.entity.Product;
+import com.devnico.api_rest.entity.enums.Status;
 import com.devnico.api_rest.service.ProductService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -44,4 +45,28 @@ public class ProductController {
         return product.isPresent() ? ResponseEntity.ok(product.get()) :
                 ResponseEntity.status(HttpStatus.NOT_FOUND).body("Product not found");
     }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Product> updateProduct(@PathVariable Long id,
+                                                 @RequestBody Product producto){
+        return ResponseEntity.ok(productService.updateProduct(id, producto));
+    }
+
+    @DeleteMapping
+    public ResponseEntity<Void> deleteProduct(@PathVariable Long id){
+        productService.deleteProduct(id);
+        return ResponseEntity.noContent().build();
+    }
+
+    @PutMapping("/status/{id}")
+    public ResponseEntity<Product> changeStatus(@PathVariable Long id,
+                                          @RequestBody Status status){
+        return ResponseEntity.ok(productService.changeStatusProduct(id,status));
+    }
+
+    @GetMapping("/list-by-status/{status}")
+    public ResponseEntity<List<Product>> listByStatus(@PathVariable Status status){
+        return ResponseEntity.ok(productService.findByStatus(status));
+    }
+
 }
