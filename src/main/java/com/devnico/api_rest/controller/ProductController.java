@@ -3,6 +3,7 @@ package com.devnico.api_rest.controller;
 import com.devnico.api_rest.entity.Product;
 import com.devnico.api_rest.entity.enums.Status;
 import com.devnico.api_rest.service.ProductService;
+import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -21,8 +22,8 @@ public class ProductController {
     }
 
     //Es mejor este forma de las ResponseEntity que el .ok(), ya que esta tiene una respuesta más concreta 201
-    @PostMapping("/create")
-    public ResponseEntity<Product> createProduct(@RequestBody Product newProduct){
+    @PostMapping
+    public ResponseEntity<Product> createProduct(@Valid @RequestBody Product newProduct){
         return ResponseEntity.status(HttpStatus.CREATED).body(productService.saveProduct(newProduct));
     }
 
