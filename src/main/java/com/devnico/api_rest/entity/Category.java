@@ -19,7 +19,7 @@ public class Category {
    @Column(name = "id_category")
    private Long idCategory;
 
-   @NotBlank
+   @NotBlank(message = "Name is mandatory")
    @Size(max = 100)
    @Column(nullable = false, length = 100, unique = true)
     private String categoryName;

@@ -23,7 +23,7 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank // <-- Para Strings
+    @NotBlank(message = "Name is mandatory") // <-- Para Strings
     @Size(max = 100)
     @Column(name = "name", nullable = false, length = 100, unique = true)
     private String productName;
