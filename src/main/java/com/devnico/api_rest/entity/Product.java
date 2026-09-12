@@ -49,8 +49,7 @@ public class Product {
     @Column(nullable = false)
     private Status status;
 
-    // Algo muy importante es marca los nullable, length y pilas con los Enums
-
+    // Algo muy importante es marca los nullable, length y pilas con los EnumsCA
     @NotNull
     @ManyToOne
     @JoinColumn(name = "id_category", referencedColumnName = "id_category")
