@@ -1,0 +1,33 @@
+### GET request to example server
+GET https://examples.http-client.intellij.net/get
+    ?generated-in=IntelliJ IDEA
+
+### POST Category
+POST http://localhost:8080/api/v1/categories
+Content-Type: application/json
+
+{
+  "categoryName": "Tech"
+}
+
+### GET ALL Categories
+GET http://localhost:8080/api/v1/categories
+
+### POST Product
+POST http://localhost:8080/api/v1/products
+Content-Type: application/json
+
+{
+  "productName": "iPhone 18 Pro",
+  "description": "White,256 Gb",
+  "price": 1200.99,
+  "amount": 12,
+  "status": "DISPONIBLE",
+  "category": {
+    "idCategory": 1,
+    "categoryName": "Tech"
+  }
+}
+
+### GET Products
+GET http://localhost:8080/api/v1/products
