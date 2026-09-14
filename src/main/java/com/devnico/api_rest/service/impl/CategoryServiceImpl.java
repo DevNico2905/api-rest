@@ -25,4 +25,22 @@ public class CategoryServiceImpl implements CategoryService {
     public List<Category> getAllCategories() {
         return categoryRepository.findAll();
     }
+
+    @Override
+    public Category updateCategory(Long id, Category category) {
+        Category categoryDb = categoryRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Category not found"));
+
+        categoryDb.setCategoryName(category.getCategoryName());
+
+        return categoryRepository.save(categoryDb);
+    }
+
+    @Override
+    public void deleteCategory(Long id) {
+        Category categoryDb = categoryRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Category not found"));
+
+        categoryRepository.deleteById(id);
+    }
 }
