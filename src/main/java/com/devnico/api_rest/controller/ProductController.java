@@ -1,5 +1,6 @@
 package com.devnico.api_rest.controller;
 
+import com.devnico.api_rest.entity.Category;
 import com.devnico.api_rest.entity.Product;
 import com.devnico.api_rest.entity.enums.Status;
 import com.devnico.api_rest.service.ProductService;
@@ -70,4 +71,8 @@ public class ProductController {
         return ResponseEntity.ok(productService.findByStatus(status));
     }
 
+    @GetMapping("/get-all-by-category/{category}")
+    public ResponseEntity<List<Product>> findAllByCategory(@PathVariable Category category){
+        return ResponseEntity.ok(productService.findProductsByCategory(category));
+    }
 }
