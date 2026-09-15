@@ -1,4 +1,5 @@
 package com.devnico.api_rest.repository;
+import com.devnico.api_rest.entity.Category;
 import com.devnico.api_rest.entity.Product;
 import com.devnico.api_rest.entity.enums.Status;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -13,5 +14,7 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
     Optional<Product> findByProductName(String productName);
 
     List<Product> findByStatus(Status status);
+
+    List<Product> findProductsByCategory(Category category);
 
 }
