@@ -3,7 +3,7 @@ POST http://localhost:8080/api/v1/categories
 Content-Type: application/json
 
 {
-  "categoryName": "Tech"
+  "categoryName": "Food"
 }
 
 ### GET ALL Categories
@@ -25,11 +25,11 @@ POST http://localhost:8080/api/v1/products
 Content-Type: application/json
 
 {
-  "productName": "PS5",
-  "description": "White",
-  "price": 1300.99,
+  "productName": "Malteada Popsy",
+  "description": "Juan Valdez Crack",
+  "price": 10.0,
   "amount": 10,
-  "status": "NO_DISPONIBLE",
+  "status": "DISPONIBLE",
   "category": {
     "idCategory": 2,
     "categoryName": "Tech"
@@ -59,7 +59,10 @@ GET http://localhost:8080/api/v1/products
 GET http://localhost:8080/api/v1/products/get-all-by-category/2
 
 ### DELETE Product
-DELETE http://localhost:8080/api/v1/products/4
+DELETE http://localhost:8080/api/v1/products/2
 
 ### GET By Stauts
 GET http://localhost:8080/api/v1/products/list-by-status/NO_DISPONIBLE
+
+### GET Count
+GET http://localhost:8080/api/v1/products/count-all
