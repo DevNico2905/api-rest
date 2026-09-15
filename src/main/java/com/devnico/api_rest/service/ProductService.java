@@ -27,4 +27,6 @@ public interface ProductService {
 
     List<Product> findProductsByCategory(Category category);
 
+    String countAll();
+
 }

@@ -80,4 +80,10 @@ public class ProductServiceImpl implements ProductService {
     public List<Product> findProductsByCategory(Category category) {
         return productRepository.findProductsByCategory(category);
     }
+
+    @Override
+    public String countAll() {
+        long amount = productRepository.count();
+        return "There are " + amount + " products.";
+    }
 }
