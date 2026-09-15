@@ -75,4 +75,9 @@ public class ProductController {
     public ResponseEntity<List<Product>> findAllByCategory(@PathVariable Category category){
         return ResponseEntity.ok(productService.findProductsByCategory(category));
     }
+
+    @GetMapping("/count-all")
+    public ResponseEntity<String> countAllProducts(){
+        return ResponseEntity.ok(productService.countAll());
+    }
 }
