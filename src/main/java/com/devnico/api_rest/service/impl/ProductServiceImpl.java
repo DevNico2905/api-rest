@@ -1,5 +1,6 @@
 package com.devnico.api_rest.service.impl;
 
+import com.devnico.api_rest.entity.Category;
 import com.devnico.api_rest.entity.Product;
 import com.devnico.api_rest.entity.enums.Status;
 import com.devnico.api_rest.repository.ProductRepository;
@@ -73,5 +74,10 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public List<Product> findByStatus(Status status) {
         return productRepository.findByStatus(status);
+    }
+
+    @Override
+    public List<Product> findProductsByCategory(Category category) {
+        return productRepository.findProductsByCategory(category);
     }
 }

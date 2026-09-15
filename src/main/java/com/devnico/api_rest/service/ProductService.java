@@ -1,5 +1,6 @@
 package com.devnico.api_rest.service;
 
+import com.devnico.api_rest.entity.Category;
 import com.devnico.api_rest.entity.Product;
 import com.devnico.api_rest.entity.enums.Status;
 
@@ -23,5 +24,7 @@ public interface ProductService {
     Product changeStatusProduct(Long id, Status newStatus);
 
     List<Product> findByStatus(Status status);
+
+    List<Product> findProductsByCategory(Category category);
 
 }
