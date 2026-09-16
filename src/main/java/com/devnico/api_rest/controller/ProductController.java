@@ -80,4 +80,14 @@ public class ProductController {
     public ResponseEntity<String> countAllProducts(){
         return ResponseEntity.ok(productService.countAll());
     }
+
+    @GetMapping("/count-by-category/{category}")
+    public ResponseEntity<String> countByCategory(@PathVariable Category category){
+        return ResponseEntity.ok(productService.countByCategory(category));
+    }
+
+    @GetMapping("/count-by-status/{status}")
+    public ResponseEntity<String> countByStatus(@PathVariable Status status){
+        return ResponseEntity.ok(productService.countByStatus(status));
+    }
 }
