@@ -29,4 +29,8 @@ public interface ProductService {
 
     String countAll();
 
+    String countByCategory(Category category);
+
+    String countByStatus(Status status);
+
 }

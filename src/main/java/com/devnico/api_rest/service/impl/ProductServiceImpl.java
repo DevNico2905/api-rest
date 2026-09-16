@@ -48,6 +48,7 @@ public class ProductServiceImpl implements ProductService {
         productFound.setPrice(product.getPrice());
         productFound.setAmount(product.getAmount());
         productFound.setStatus(product.getStatus());
+        productFound.setCategory(product.getCategory());
 
         return productRepository.save(productFound);
 
@@ -85,5 +86,24 @@ public class ProductServiceImpl implements ProductService {
     public String countAll() {
         long amount = productRepository.count();
         return "There are " + amount + " products.";
+    }
+
+    @Override
+    public String countByCategory(Category category) {
+        // List<Product> productsByCategory = productRepository.findAll().stream()
+        //        .
+        List<Product> productsByCategory = findProductsByCategory(category);
+        long amount = productsByCategory.size();
+
+        if (amount == 0 || amount > 1) return "There are " + amount + " products by '" + category.getCategoryName() + "' category.";
+
+        return "There are " + amount + " product by '" + category.getCategoryName() + "' category.";
+    }
+
+    @Override
+    public String countByStatus(Status status) {
+        long amount = productRepository.countAllByStatus(status);
+        String noun = amount == 1 ? "product" : "products";
+        return "There are " + amount + " " + noun + " by '" + status.name() + "' status.";
     }
 }
