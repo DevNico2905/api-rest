@@ -90,14 +90,9 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public String countByCategory(Category category) {
-        // List<Product> productsByCategory = productRepository.findAll().stream()
-        //        .
-        List<Product> productsByCategory = findProductsByCategory(category);
-        long amount = productsByCategory.size();
-
-        if (amount == 0 || amount > 1) return "There are " + amount + " products by '" + category.getCategoryName() + "' category.";
-
-        return "There are " + amount + " product by '" + category.getCategoryName() + "' category.";
+        long amount = productRepository.countAllByCategory(category);
+        String noun = amount == 1 ? "product" : "products";
+        return "There are " + amount + " " + noun + " by '" + category.getCategoryName() + "' category.";
     }
 
     @Override
