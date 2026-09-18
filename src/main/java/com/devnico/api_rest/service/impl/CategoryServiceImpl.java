@@ -6,6 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class CategoryServiceImpl implements CategoryService {
@@ -42,5 +43,20 @@ public class CategoryServiceImpl implements CategoryService {
                 .orElseThrow(() -> new RuntimeException("Category not found"));
 
         categoryRepository.deleteById(id);
+    }
+
+    @Override
+    public Optional<Category> findByCategoryName(String categoryName) {
+        return Optional.empty();
+    }
+
+    @Override
+    public Optional<Category> findById(Long id) {
+        return Optional.empty();
+    }
+
+    @Override
+    public boolean existsByCategoryName(String categoryName) {
+        return false;
     }
 }
