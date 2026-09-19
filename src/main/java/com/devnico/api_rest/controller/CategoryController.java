@@ -40,4 +40,19 @@ public class CategoryController {
         categoryService.deleteCategory(id);
         return ResponseEntity.noContent().build();
     }
+
+    @GetMapping("find-by-name/{name}")
+    public ResponseEntity<Category> findCategoryByName(@PathVariable String name){
+        return ResponseEntity.ok(categoryService.findByCategoryName(name));
+    }
+
+    @GetMapping("find-by-id/{id}")
+    public ResponseEntity<Category> findById(@PathVariable Long id){
+        return ResponseEntity.ok(categoryService.findById(id));
+    }
+
+    @GetMapping("exists-by-name/{name}")
+    public ResponseEntity<Boolean> existsByCategoryName(@PathVariable String name){
+        return ResponseEntity.ok(categoryService.existsByCategoryName(name));
+    }
 }
